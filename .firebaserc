@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tsaudiotranscriber": {
+      "hosting": {
+        "cliente": [
+          "tsaudiotranscriber"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tsaudiotranscriber"
+  }
+}

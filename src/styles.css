@@ -1,0 +1,30 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.titulo{
+    font-size: 1.8rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Estilos adicionales para hacer el texto más grande en dispositivos más grandes */
+@media (min-width: 768px) {
+    .container {
+        margin-top: 10%;
+        margin-left: 10%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        margin-top: 15%;
+        margin-left: 15%;
+    }
+}
