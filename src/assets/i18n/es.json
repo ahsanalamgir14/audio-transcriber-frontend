@@ -1,3 +1,9 @@
 {
-    "welcome": "¡Bienvenido!"
+    "welcome": "¡Bienvenido!",
+    "Record": "Grabar",
+    "Capture": "Capture",
+    "Document": "Document",
+    "Import": "Importar",
+    "My Audios": "Mis audios",
+    "Profile": "Perfil"
 }

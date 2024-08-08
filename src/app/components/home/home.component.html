@@ -7,38 +7,46 @@
 <div class="container">
     <div class="inner-container">
         <div class="row d-flex items-center justify-content-center">
-            <div class="col-md-6">
+            <div class="col-md-6" (click)="navigateToRoute('grabadora')">
                 <div class="card home-card card-shadow sound">
                     <div class="card-body">
                         <img class="card-img-top" src="../../../assets/images/sound.png">
                     </div>
-                    <p>Record</p>
+                    <p>{{"Record" | translate}}</p>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="card home-card card-shadow">
+            <div class="col-md-6" (click)="navigateToRoute('/import')">
+                <div class="card home-card card-shadow not-available">
                     <div class="card-body">
-                        <img class="card-img-top" src="../../../assets/images/capture.png">
+                        <img class="card-img-top" src="../../../assets/images/import.png">
                     </div>
-                    <p>Capture</p>
+                    <p>{{"Import" | translate}}</p>
                 </div>
             </div>
         </div>
         <div class="row d-flex items-center justify-content-center">
-            <div class="col-md-6">
+            <div class="col-md-6" (click)="navigateToRoute('misaudios')">
                 <div class="card home-card shadow">
                     <div class="card-body">
                         <img class="card-img-top" src="../../../assets/images/document.png">
                     </div>
-                    <p>Document</p>
+                    <p>{{"My Audios" | translate}}</p>
                 </div>
             </div>
-            <div class="col-md-6">
+            <!-- <div class="col-md-6" (click)="navigateToRoute()">
+                <div class="card home-card card-shadow">
+                    <div class="card-body">
+                        <img class="card-img-top" src="../../../assets/images/capture.png">
+                    </div>
+                    <p>{{"Capture" | translate}}</p>
+                </div>
+            </div> -->
+            <div class="col-md-6" (click)="navigateToRoute('usuario')">
                 <div class="card home-card shadow">
                     <div class="card-body">
-                        <img class="card-img-top" src="../../../assets/images/import.png">
+                        <img class="card-img-top" src="../../../assets/images/capture.png">
                     </div>
-                    <p>Import</p>
+                    <p>{{"Profile" | translate}}</p>
                 </div>
             </div>
         </div>
