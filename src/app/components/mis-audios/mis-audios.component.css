@@ -1,0 +1,32 @@
+html,
+body {
+  height: 100%;
+  margin: 0; /* Asegúrate de que no haya margen en el cuerpo */
+}
+
+.container {
+  margin-top: 6%; /* Elimina el margen superior */
+  padding-top: 0; /* Elimina el padding superior si es necesario */
+}
+
+h1 {
+  margin-top: 10px; /* Ajusta este valor según tus necesidades */
+}
+
+@media (min-width: 640px) {
+  table {
+    display: inline-table !important;
+  }
+
+  thead tr:not(:first-child) {
+    display: none;
+  }
+}
+
+td:not(:last-child) {
+  border-bottom: 0;
+}
+
+th:not(:last-child) {
+  border-bottom: 2px solid rgba(0, 0, 0, .1);
+}

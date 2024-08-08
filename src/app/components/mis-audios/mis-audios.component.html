@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Mis audios</h1>
+  <table class="table table-striped table-responsive-sm">
+    <thead>
+      <tr>
+        <th scope="col">Fecha</th>
+        <th scope="col">Calidad</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let audio of listAudios | paginate: { itemsPerPage: 14, currentPage: p }">
+        <td>{{ audio.fecha }}</td>
+        <td>{{ audio.calidad }}</td>
+        <td>
+          <button class="btn btn-primary" (click)="enviarPorCorreo(audio)">Envío</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

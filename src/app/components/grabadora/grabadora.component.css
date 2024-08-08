@@ -1,0 +1,134 @@
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.overlay, .botonera, .container {
+  flex: 1; /* Hace que los bloques se distribuyan equitativamente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Asegura que los elementos internos no se salgan del bloque */
+}
+
+.overlay {
+  background-color: #B0C4B1;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.botonera {
+  background-color: #fff;
+  flex: 0.3;
+}
+
+.container {
+  position: relative;
+}
+
+.countdown {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 20px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.botonGrabador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+}
+
+
+.botonEliminar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.loader {
+  --size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: calc(var(--size) / 2);
+  height: calc(var(--size) * 10);
+}
+
+.loader div {
+  width: var(--size);
+  height: var(--size);
+  border-radius: var(--size);
+  background-color: #53acdf;
+}
+
+.loader.animating div {
+  animation: wave 2s infinite ease-in-out;
+}
+
+@keyframes wave {
+  25% {
+    height: calc(var(--size) * 5);
+    background-color: #fc00ff;
+  }
+  50% {
+    height: var(--size);
+    background-color: #9c73f8;
+  }
+}
+
+.loader.animating div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader.animating div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.loader.animating div:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.loader.animating div:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.main-header-text {
+  font-size: 32px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.main-header-text .title {
+  margin-top: 2vh;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.main-header-text .subtitle {
+  font-size: 16px;
+  color: #555;
+}
+
