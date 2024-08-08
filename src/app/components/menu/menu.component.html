@@ -1,0 +1,16 @@
+<div class="sidebar-opener" (click)="sidebarShow = !sidebarShow">
+    <span class="menu-icon">&#9776;</span>
+</div>
+
+<div class="sidebar-slider" [class.sidebar-slide-in]="sidebarShow">
+    <div class="sidebar-close" (click)="sidebarShow = !sidebarShow">
+        x
+    </div>
+    <div class="sidebar-content">
+        <ul>
+            <li><i class="fas fa-save"></i> Saved</li>
+            <li><i class="fas fa-cog"></i> Settings</li>
+            <li><i class="fas fa-sign-out-alt"></i> Logout</li>
+        </ul>
+    </div>
+</div>

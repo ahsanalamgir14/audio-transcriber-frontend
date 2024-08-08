@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './menu.component.css'
 })
 export class MenuComponent {
+  public sidebarShow: boolean = false;
 
+  toggleSidebar() {
+    this.sidebarShow = !this.sidebarShow
+  }
 }
