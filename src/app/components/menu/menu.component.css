@@ -75,3 +75,6 @@
     background-color: #ddd; /* Cambia el color de fondo al pasar el ratón por encima */
     color: #000; /* Cambia el color del texto al pasar el ratón por encima */
   }
+  ol, ul {
+    padding-left: 0px !important;
+  }
