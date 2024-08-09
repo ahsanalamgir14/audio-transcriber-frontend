@@ -28,3 +28,48 @@ body {
         margin-left: 15%;
     }
 }
+
+.bg-orange {
+    /* background-color: #df643a !important; */
+    background-color: #f4774b !important;
+}
+/* For WebKit browsers (e.g., Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Light gray background of the track */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d3d3d3; /* Light gray scrollbar thumb color */
+    border-radius: 10px;
+    border: 3px solid #f0f0f0; /* Border color around thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #b0b0b0; /* Darker gray color on hover */
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin; /* 'auto' or 'thin' */
+    scrollbar-color: #d3d3d3 #f0f0f0; /* Scrollbar color, background color */
+}
+
+/* For Internet Explorer and Edge */
+.scrollbar {
+    overflow-y: scroll;
+}
+
+.scrollbar::-ms-scrollbar {
+    width: 12px;
+    background-color: #f0f0f0;
+}
+
+.scrollbar::-ms-scrollbar-thumb {
+    background-color: #d3d3d3;
+    border-radius: 10px;
+}
