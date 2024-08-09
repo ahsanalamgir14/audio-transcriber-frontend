@@ -2,7 +2,7 @@
   <div class="overlay bg-orange">
     <div class="main-header-text">
       <p class="title">Grabe un audio</p>
-      <p class="subtitle text-white">Grabe y envíe su audio para ser procesado</p>
+      <p class="subtitle text-white w-[80%]">Grabe y envíe su audio para ser procesado</p>
     </div>
     <div class="loader" [ngClass]="{'animating': grabando}">
       <div></div>
@@ -86,11 +86,12 @@
                   clip-rule="evenodd" />
               </svg>
             </button>
-            <button class="py-3 px-20 rounded-lg text-sm font-medium" (click)="eliminarAudio()">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" 
+            <button class="py-3 px-20 rounded-lg text-sm font-medium" (click)="stopAudio()">
+              <img class="h-6 w-6" src="/assets/images/icons8-stop-64.png" alt="">
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" 
                 class="text-gray-500 w-6 h-6 bi bi-stop-fill" viewBox="0 0 24 24">
                 <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"/>
-              </svg>
+              </svg> -->
               <!-- <svg class="w-6 h-6 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" d="M8.586 2.586A2 2 0 0 1 10 2h4a2 2 0 0 1 2 2v2h3a1 1 0 1 1 0 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V8a1 1 0 0 1 0-2h3V4a2 2 0 0 1 .586-1.414ZM10 6h4V4h-4v2Zm1 4a1 1 0 1 0-2 0v8a1 1 0 1 0 2 0v-8Zm4 0a1 1 0 1 0-2 0v8a1 1 0 1 0 2 0v-8Z" clip-rule="evenodd"/>
               </svg> -->

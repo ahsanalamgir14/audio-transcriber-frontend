@@ -7,7 +7,7 @@ import { Router } from "@angular/router";
 @Component({
   selector: 'app-grabadora',
   templateUrl: './grabadora.component.html',
-  styleUrl: './grabadora.component.css'
+  styleUrl: './grabadora.component.scss'
 })
 
 export class GrabadoraComponent implements OnDestroy {
@@ -169,6 +169,10 @@ export class GrabadoraComponent implements OnDestroy {
     const [minutos, segundos] = duracion.split(':');
     const totalSegundos = (parseInt(minutos) * 60) + parseInt(segundos);
     return totalSegundos;
+  }
+
+  stopAudio() {
+    
   }
   //#endregion
 
