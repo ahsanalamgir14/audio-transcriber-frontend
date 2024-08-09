@@ -29,6 +29,10 @@ body {
     }
 }
 
+:root {
+    --primary-color: #f4774b !important;
+}
+
 .bg-orange {
     /* background-color: #df643a !important; */
     background-color: #f4774b !important;

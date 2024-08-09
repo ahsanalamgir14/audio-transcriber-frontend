@@ -2,7 +2,7 @@
   <div class="overlay bg-orange">
     <div class="main-header-text">
       <p class="title">Grabe un audio</p>
-      <p class="subtitle">Grabe y envíe su audio para ser procesado</p>
+      <p class="subtitle text-white">Grabe y envíe su audio para ser procesado</p>
     </div>
     <div class="loader" [ngClass]="{'animating': grabando}">
       <div></div>
@@ -32,31 +32,62 @@
 
     <div class="buttons-container">
       <div class="botonGrabador">
-        <button *ngIf="!grabando && !mostrarRegrabar" (click)="iniciarGrabacion()" class="mt-10 m-auto flex items-center justify-center bg-blue-400 hover:bg-blue-500 rounded-full w-32 h-32 focus:outline-none">
-          <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-white">
+        <button *ngIf="!grabando && !mostrarRegrabar" (click)="iniciarGrabacion()" class="mt-10 m-auto flex items-center justify-center rounded-full w-32 h-32">
+          <div class="mic-container">
+            <div class="circle">
+              <i class="fas fa-microphone"></i>
+            </div>
+          </div>          
+          <!-- <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-white">
             <path fill="currentColor" d="M128 176a48.05 48.05 0 0 0 48-48V64a48 48 0 0 0-96 0v64a48.05 48.05 0 0 0 48 48ZM96 64a32 32 0 0 1 64 0v64a32 32 0 0 1-64 0Zm40 143.6V232a8 8 0 0 1-16 0v-24.4A80.11 80.11 0 0 1 48 128a8 8 0 0 1 16 0a64 64 0 0 0 128 0a8 8 0 0 1 16 0a80.11 80.11 0 0 1-72 79.6Z"/>
-          </svg>
+          </svg> -->
         </button>
 
-        <button *ngIf="grabando" (click)="detenerGrabacion()" class="mt-10 m-auto flex items-center justify-center bg-red-400 rounded-full w-32 h-32 focus:outline-none pulse">
-          <svg class="h-12 w-12" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <button *ngIf="grabando" (click)="detenerGrabacion()" class="mt-10 m-auto flex items-center justify-center rounded-full w-32 h-32 pulse">
+          <div class="mic-container">
+            <div class="circle active">
+              <i class="fas fa-microphone"></i>
+            </div>
+          </div>   
+          <!-- <svg class="h-12 w-12" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path fill="white" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-          </svg>
+          </svg> -->
         </button>
 
-        <button *ngIf="!grabando && mostrarRegrabar" (click)="guardarAudio()" class="mt-10 m-auto flex items-center justify-center bg-green-400 hover:bg-green-500 rounded-full w-32 h-32  focus:outline-none">
-          <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M13.383 4.076a6.5 6.5 0 0 0-6.887 3.95A5 5 0 0 0 7 18h3v-4a2 2 0 0 1-1.414-3.414l2-2a2 2 0 0 1 2.828 0l2 2A2 2 0 0 1 14 14v4h4a4 4 0 0 0 .988-7.876 6.5 6.5 0 0 0-5.605-6.048Z"/>
-            <path d="M12.707 9.293a1 1 0 0 0-1.414 0l-2 2a1 1 0 1 0 1.414 1.414l.293-.293V19a1 1 0 1 0 2 0v-6.586l.293.293a1 1 0 0 0 1.414-1.414l-2-2Z"/>
-          </svg>
+        <button *ngIf="!grabando && mostrarRegrabar" (click)="guardarAudio()" class="mt-10 m-auto flex items-center justify-center rounded-full w-32 h-32 focus:outline-none">
+          <div class="mic-container upload-container">
+            <div class="circle !bg-green-400 !hover:bg-green-500">
+              <i class="fas fa-upload !text-white"></i>
+            </div>
+          </div>
+          <!-- <div class="w-[80px] h-[80px]">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M13.383 4.076a6.5 6.5 0 0 0-6.887 3.95A5 5 0 0 0 7 18h3v-4a2 2 0 0 1-1.414-3.414l2-2a2 2 0 0 1 2.828 0l2 2A2 2 0 0 1 14 14v4h4a4 4 0 0 0 .988-7.876 6.5 6.5 0 0 0-5.605-6.048Z"/>
+              <path d="M12.707 9.293a1 1 0 0 0-1.414 0l-2 2a1 1 0 1 0 1.414 1.414l.293-.293V19a1 1 0 1 0 2 0v-6.586l.293.293a1 1 0 0 0 1.414-1.414l-2-2Z"/>
+            </svg>
+          </div> -->
         </button>
       </div>
-      <div class="botonEliminar">
-        <button class="py-3 px-3 rounded-lg text-sm font-medium bg-red-500 text-white relative" style="display: block; margin: 0 auto;" (click)="eliminarAudio()">
-          <svg class="w-6 h-6 text-gray-800 dark:text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-            <path fill-rule="evenodd" d="M8.586 2.586A2 2 0 0 1 10 2h4a2 2 0 0 1 2 2v2h3a1 1 0 1 1 0 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V8a1 1 0 0 1 0-2h3V4a2 2 0 0 1 .586-1.414ZM10 6h4V4h-4v2Zm1 4a1 1 0 1 0-2 0v8a1 1 0 1 0 2 0v-8Zm4 0a1 1 0 1 0-2 0v8a1 1 0 1 0 2 0v-8Z" clip-rule="evenodd"/>
-          </svg>
-        </button>
+      <div class="botonEliminar w-[70%] m-auto">
+        <div class="row">
+          <div class="col-md-6">
+            <button class="py-3 px-3 rounded-lg text-sm font-medium" (click)="eliminarAudio()">
+              <svg class="w-6 h-6 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M8.586 2.586A2 2 0 0 1 10 2h4a2 2 0 0 1 2 2v2h3a1 1 0 1 1 0 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V8a1 1 0 0 1 0-2h3V4a2 2 0 0 1 .586-1.414ZM10 6h4V4h-4v2Zm1 4a1 1 0 1 0-2 0v8a1 1 0 1 0 2 0v-8Zm4 0a1 1 0 1 0-2 0v8a1 1 0 1 0 2 0v-8Z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+  
+          </div>
+          <div class="col-md-6">
+            <button class="py-3 px-3 rounded-lg text-sm font-medium" (click)="eliminarAudio()">
+              <svg class="w-6 h-6 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M8.586 2.586A2 2 0 0 1 10 2h4a2 2 0 0 1 2 2v2h3a1 1 0 1 1 0 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V8a1 1 0 0 1 0-2h3V4a2 2 0 0 1 .586-1.414ZM10 6h4V4h-4v2Zm1 4a1 1 0 1 0-2 0v8a1 1 0 1 0 2 0v-8Zm4 0a1 1 0 1 0-2 0v8a1 1 0 1 0 2 0v-8Z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- <div class="grid grid-col-2 md:grid-cols-3 gap-4">
+        </div> -->
       </div>
     </div>
   </div>
