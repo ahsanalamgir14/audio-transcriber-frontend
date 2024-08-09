@@ -7,16 +7,24 @@ import { ToastrModule } from 'ngx-toastr';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
+import { LogInGuardian } from './components/log-in/log-in.guardian';
+import { NgxPaginationModule } from 'ngx-pagination';
 // Componentes
 import { LogInComponent } from './components/log-in/log-in.component';
+import { GrabadoraComponent } from './components/grabadora/grabadora.component';
+import { MisAudiosComponent } from './components/mis-audios/mis-audios.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getAnalytics, provideAnalytics, ScreenTrackingService, UserTrackingService } from '@angular/fire/analytics';
 import { getStorage, provideStorage } from '@angular/fire/storage';
+import { AudioBlobComponent } from './components/audio-blob/audio-blob.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
+import { UserPageComponent } from './components/user-page/user-page.component';
+
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { CommonModule } from '@angular/common';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -27,8 +35,12 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   declarations: [
     AppComponent,
     LogInComponent,
+    GrabadoraComponent,
+    MisAudiosComponent,
+    AudioBlobComponent,
     MenuComponent,
-    HomeComponent
+    HomeComponent,
+    UserPageComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +48,9 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    NgxPaginationModule,
     FormsModule,
+    CommonModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -49,7 +63,8 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     provideClientHydration(),
     ScreenTrackingService,
     UserTrackingService,
-    CookieService
+    CookieService,
+    LogInGuardian
   ],
   bootstrap: [AppComponent]
 })
