@@ -1,16 +1,18 @@
-<div class="sidebar-opener" (click)="sidebarShow = !sidebarShow">
+<div *ngIf="showMenu" class="sidebar-opener" (click)="sidebarShow = !sidebarShow">
     <span class="menu-icon">&#9776;</span>
-</div>
-
-<div class="sidebar-slider" [class.sidebar-slide-in]="sidebarShow">
+  </div>
+  
+  <div *ngIf="showMenu" class="sidebar-slider" [class.sidebar-slide-in]="sidebarShow">
     <div class="sidebar-close" (click)="sidebarShow = !sidebarShow">
         x
     </div>
     <div class="sidebar-content">
         <ul>
-            <li><i class="fas fa-save"></i> Saved</li>
-            <li><i class="fas fa-cog"></i> Settings</li>
-            <li><i class="fas fa-sign-out-alt"></i> Logout</li>
+            <li (click)="home()"><i class="fas fa-house logout-button"></i> Home </li>
+            <li (click)="grabadora()"><i class="fas fa-microphone logout-button"></i> Grabadora </li>
+            <li (click)="misAudios()"><i class="fas fa-save logout-button"></i> Mis audios </li>
+            <li (click)="miPerfil()"><i class="fas fa-user logout-button"></i> Perfil </li>
+            <li (click)="logout()"><i class="fas fa-sign-out-alt logout-button"></i> Logout </li>
         </ul>
     </div>
-</div>
+  </div>

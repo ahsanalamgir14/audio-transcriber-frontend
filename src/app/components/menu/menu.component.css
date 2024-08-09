@@ -7,7 +7,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    background-color: #df643a;
+    background-color: rgba(177, 160, 153, 0.7); /* Cambia el último valor para ajustar la transparencia */
     transform: translateX(100%);
     transition: ease-in-out 300ms transform;
     width: 200px;
@@ -44,7 +44,7 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    background-color: #e0653b;
+    background-color: rgb(114, 114, 114);
     color: white;
     padding: 10px 15px;
     border-radius: 50%;
@@ -58,3 +58,20 @@
 .sidebar-content ul li {
     margin-bottom: 10px;
 }
+
+/* Estilos para el botón de logout */
+.logout-button {
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    display: inline-block;
+    padding: 5px 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para los cambios de color */
+  }
+  
+  .logout-button:hover {
+    background-color: #ddd; /* Cambia el color de fondo al pasar el ratón por encima */
+    color: #000; /* Cambia el color del texto al pasar el ratón por encima */
+  }
