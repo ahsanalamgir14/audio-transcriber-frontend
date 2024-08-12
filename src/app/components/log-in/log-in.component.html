@@ -1,3 +1,4 @@
+
 <svg id="background-svg" width="100%" height="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"
   preserveAspectRatio="none" overflow="auto" shape-rendering="auto" fill="#ffffff">
   <defs>
@@ -5,56 +6,56 @@
     <path id="motionpath" d="M -600 0 0 0" />
   </defs>
   <g>
-    <use xlink:href="#wavepath" y="288" fill="#FFBF78">
+    <use xlink:href="#wavepath" y="288" fill="#f4774b">
       <animateMotion dur="5s" repeatCount="indefinite">
         <mpath xlink:href="#motionpath" />
       </animateMotion>
     </use>
   </g>
 </svg>
-
-<div class="flex min-h-full flex-col justify-center px-10 py-12 lg:px-8 mt-16 lg:mt-0">
+<div class="background flex min-h-full flex-col justify-center px-10 pb-9 lg:px-8 lg:mt-0">
   <div class="sm:mx-auto sm:w-full sm:max-w-sm custom-background">
-    <img class="mx-auto h-10 w-auto" src="/assets/images/logoTS.png" alt="Your Company">
-    <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Introduce tus credenciales
+    <!-- <img class="mx-auto h-10 w-auto" src="/assets/images/logoTS.png" alt="Your Company"> -->
+     <h1 class="font-bold text-center mb-0">Text Sage</h1>
+    <h2 class="text-center text-xl font-light leading-9 tracking-tight text-gray-500">Introduce tus credenciales
     </h2>
   </div>
 
 
-  <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+  <div class="mt-3 sm:mx-auto sm:w-full sm:max-w-sm z-10">
     <form class="space-y-6" #formularioLogIn="ngForm" (ngSubmit)="logIn(formularioLogIn)">
       <div>
-        <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Usuario</label>
+        <label for="email" class="block text-sm font-bold leading-6 text-black">Usuario</label>
         <div class="mt-2">
           <input id="email" name="email" type="email" autocomplete="email" required
-            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            class="block w-full rounded-md border border-gray-500 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
             ngModel>
         </div>
       </div>
 
       <div>
         <div class="flex items-center justify-between">
-          <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Contraseña</label>
+          <label for="password" class="block text-sm font-bold leading-6 text-black">Contraseña</label>
           <div class="text-sm">
-            <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-500">¿Olvidaste la contraseña?</a>
+            <a class="font-semibold text-black no-underline cursor-pointer hover:text-gray-500">¿Olvidaste la contraseña?</a>
           </div>
         </div>
         <div class="mt-2">
           <input id="password" name="password" type="password" autocomplete="current-password" required
-            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            class="block w-full rounded-md border border-orange-500 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
             ngModel>
         </div>
       </div>
 
       <div>
         <button type="submit"
-          class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Acceder</button>
+          class="flex w-full justify-center rounded-md bg-orange-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-orange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Acceder</button>
       </div>
     </form>
 
-    <p class="mt-10 text-center text-sm text-gray-500">
+    <p class="mt-3 text-center text-sm text-gray-500">
       ¿Deseas tener acceso?
-      <a href="#" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Date de alta</a>
+      <a href="#" class="font-semibold text-black no-underline cursor-pointer hover:text-gray-500">Date de alta</a>
     </p>
   </div>
 </div>

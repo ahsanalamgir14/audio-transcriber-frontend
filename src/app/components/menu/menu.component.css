@@ -78,3 +78,7 @@
   ol, ul {
     padding-left: 0px !important;
   }
+
+.ant-drawer-right > .ant-drawer-content-wrapper {
+    width: 250px !important;
+}

@@ -8,6 +8,33 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "~ng-zorro-antd/ng-zorro-antd.min.css";
+
+
+/* // Regular */
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/DMSans-Regular.ttf') format('truetype');
+  }
+  
+  /* // Medium */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./assets/fonts/DMSans-Medium.ttf') format('truetype');
+  }
+  
+  /* // Semi Bold */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./assets/fonts/DMSans-SemiBold.ttf') format('truetype');
+  }
+
 
 .titulo{
     font-size: 1.8rem;
@@ -17,14 +44,14 @@ body {
 /* Estilos adicionales para hacer el texto más grande en dispositivos más grandes */
 @media (min-width: 768px) {
     .container {
-        margin-top: 10%;
+        /* margin-top: 10%; */
         margin-left: 10%;
     }
 }
 
 @media (min-width: 1024px) {
     .container {
-        margin-top: 15%;
+        /* margin-top: 10%; */
         margin-left: 15%;
     }
 }
@@ -76,4 +103,21 @@ body {
 .scrollbar::-ms-scrollbar-thumb {
     background-color: #d3d3d3;
     border-radius: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button,
+div,
+label,
+small {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  margin: 0;
 }

@@ -1,3 +1,4 @@
+import { NzDrawerModule } from 'ng-zorro-antd/drawer';
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -57,7 +58,8 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    NzDrawerModule
   ],
   providers: [
     provideClientHydration(),

@@ -1,4 +1,5 @@
-<div class="overlay h-[250px] bg-orange">
+<!-- <app-menu></app-menu> -->
+<div class="overlay bg-orange">
     <div class="main-header">
         {{ 'welcome' | translate }}<br>
         Natalia
@@ -7,7 +8,7 @@
 <div class="container">
     <div class="inner-container">
         <div class="row d-flex items-center justify-content-center">
-            <div class="col-md-6" (click)="navigateToRoute('grabadora')">
+            <div class="col-md-6" (click)="navigateToRoute('/grabadora')">
                 <div class="card home-card card-shadow sound">
                     <div class="card-body">
                         <img class="card-img-top" src="../../../assets/images/sound.png">
@@ -15,7 +16,7 @@
                     <p>{{"Record" | translate}}</p>
                 </div>
             </div>
-            <div class="col-md-6" (click)="navigateToRoute('/import')">
+            <div class="col-md-6">
                 <div class="card home-card card-shadow not-available">
                     <div class="card-body">
                         <img class="card-img-top" src="../../../assets/images/import.png">
@@ -25,7 +26,7 @@
             </div>
         </div>
         <div class="row d-flex items-center justify-content-center">
-            <div class="col-md-6" (click)="navigateToRoute('misaudios')">
+            <div class="col-md-6" (click)="navigateToRoute('/misaudios/testuser')">
                 <div class="card home-card shadow">
                     <div class="card-body">
                         <img class="card-img-top" src="../../../assets/images/document.png">
@@ -41,7 +42,7 @@
                     <p>{{"Capture" | translate}}</p>
                 </div>
             </div> -->
-            <div class="col-md-6" (click)="navigateToRoute('usuario')">
+            <div class="col-md-6" (click)="navigateToRoute('/usuario')">
                 <div class="card home-card shadow">
                     <div class="card-body">
                         <img class="card-img-top" src="../../../assets/images/capture.png">

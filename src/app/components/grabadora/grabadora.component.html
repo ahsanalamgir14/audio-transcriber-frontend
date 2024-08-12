@@ -13,7 +13,7 @@
     </div>
   </div>
 
-  <div class="botonera">
+  <div class="botonera mt-3">
     <p class="text-center mb-3">Seleccione la calidad del audio:</p>
     <div class="btn-group" role="group" aria-label="Basic example">
       <button type="button" class="btn btn-secondary btn-lg" [ngClass]="{'active': calidadAudio === 'tiny'}"
@@ -27,17 +27,17 @@
     </div>
   </div>
 
-  <div class="container">
-    <div class="countdown text-6xl">
+  <div class="container mt-3">
+    <div class="countdown text-4xl">
       <div class="text-xxl text-gray-900 dark:text-black">
         {{ tiempoTranscurrido }}
       </div>
     </div>
 
     <div class="buttons-container">
-      <div class="botonGrabador">
+      <!-- <div class="botonGrabador"> -->
         <button *ngIf="!grabando && !mostrarRegrabar" (click)="iniciarGrabacion()"
-          class="mt-10 m-auto flex items-center justify-center rounded-full w-32 h-32">
+          class="mt-10 m-auto flex items-center justify-center rounded-full w-32 h-[120px]">
           <div class="mic-container">
             <div class="circle">
               <i class="fas fa-microphone"></i>
@@ -49,7 +49,7 @@
         </button>
 
         <button *ngIf="grabando" (click)="detenerGrabacion()"
-          class="mt-10 m-auto flex items-center justify-center rounded-full w-32 h-32 pulse">
+          class="mt-10 m-auto flex items-center justify-center rounded-full w-32 h-[120px] pulse">
           <div class="mic-container">
             <div class="circle active">
               <i class="fas fa-microphone"></i>
@@ -61,8 +61,8 @@
         </button>
 
         <button *ngIf="!grabando && mostrarRegrabar" (click)="guardarAudio()"
-          class="mt-10 m-auto flex items-center justify-center rounded-full w-32 h-32 focus:outline-none">
-          <div class="mic-container upload-container">
+          class="mt-10 m-auto flex items-center justify-center rounded-full w-32 !h-[120px] focus:outline-none">
+          <div class="mic-container">
             <div class="circle !bg-green-400 !hover:bg-green-500">
               <i class="fas fa-upload !text-white"></i>
             </div>
@@ -74,7 +74,7 @@
             </svg>
           </div> -->
         </button>
-      </div>
+      <!-- </div> -->
       <div class="botonEliminar m-auto">
         <div class="row">
           <div class="col-md-12">

@@ -6,9 +6,10 @@ import { Router } from "@angular/router";
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'
 })
-export class MenuComponent implements OnInit{
+export class MenuComponent implements OnInit {
   public sidebarShow: boolean = false;
   public showMenu: boolean = true;
+  visible = false;
 
   constructor(private router:Router){}
 
@@ -26,28 +27,41 @@ export class MenuComponent implements OnInit{
     
   }
 
+  open(): void {
+    this.visible = true;
+  }
+
+  close(): void {
+    this.visible = false;
+  }
+  
   toggleSidebar() {
     this.sidebarShow = !this.sidebarShow
   }
 
   logout(){
     this.router.navigate(['/login']);
+    this.close();
   }
 
   misAudios(){
     this.router.navigate(['/misaudios', "testuser"]);
+    this.close();
   }
 
   grabadora(){
     this.router.navigate(['/grabadora']);
+    this.close();
   }
 
   home(){
     this.router.navigate(['/home']);
+    this.close();
   }
 
   miPerfil(){
     this.router.navigate(['/usuario']);
+    this.close();
   }
 
 }

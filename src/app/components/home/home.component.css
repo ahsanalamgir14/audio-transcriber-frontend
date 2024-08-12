@@ -13,6 +13,7 @@
     align-items: center;
     margin-bottom: 20px;
     vertical-align: middle;
+    cursor: pointer;
 
     .card-body {
         display: flex;
@@ -35,7 +36,8 @@
     font-size: 32px;
     font-weight: 600;
     color: #fff;
-    padding: 40px;
+    padding: 0px 50px 50px 50px;
+    /* padding: 50px; */
 }
 
 .card-shadow {
@@ -56,4 +58,13 @@
     p {
         color: #df643a;
     }
+}
+
+.not-available {
+    /* background-color: #ccc; Color gris */
+    cursor: not-allowed; /* Cursor indicando que no está disponible */
+    /* opacity: 0.9; */
+}
+.overlay {
+    height: 180px;
 }
